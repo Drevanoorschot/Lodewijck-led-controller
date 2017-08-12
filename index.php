@@ -5,6 +5,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.form/4.2.2/jquery.form.min.js"></script>
 <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap/theme.min.css">
 <link rel="stylesheet" type="text/css" href="style.css">
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
@@ -15,7 +16,7 @@
         <h1>Lodewijck Led Control Panel</h1>
     </div>
     <div>
-        <div class="col-12 content" id="content">
+        <div class="col-sm-12 content" id="content">
             <form method="post" id="form" name="form">
                 <table>
                     <tr>
