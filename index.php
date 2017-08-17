@@ -20,7 +20,7 @@
     </div>
     <div>
         <div class="col-sm-12 content" id="content">
-            <form method="post" id="form" name="form">
+            <form action="ChangeColor.php" method="post" id="form" name="form">
                 <table>
                     <tr>
                         <td>red:</td>
@@ -37,7 +37,8 @@
                         <td><input class="form-control" min="0" max="1020" type="range" name="blueslider" for="bluenumber" oninput="bluenumber.value=blueslider.value; changeBorderColor();"></td>
                     </tr>
                 </table>
-                <button class="btn btn-default" type="button" onclick="changeColor();">change color</button>
+                <input class="btn btn-default" type="submit" onclick="changeColor()" value="change color">
+                <!-- <input type="submit" value="debug"> -->
             </form>
         </div>
         <div class="col-sm-12 content">
