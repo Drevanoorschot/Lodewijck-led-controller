@@ -1,8 +1,11 @@
+
 .header {
     background-color: darkred;
     text-align: center;
     color: white;
     border-radius: 10px;
+    padding: 5px;
+    margin-bottom: 10px;
 }
 
 .content {
@@ -10,11 +13,17 @@
     border-style: solid;
     border-radius: 10px;
     padding: 10px;
+    margin-bottom: 10px;
 }
+h1 {
+    color: white;
+}
+
 td {
     padding: 5px;
+    font-size: 120%;
 }
 
 input[type="number"] {
-    width: 80px;
+    width: 100px;
 }

@@ -8,7 +8,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.form/4.2.2/jquery.form.min.js"></script>
 <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap/theme.min.css">
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/paper/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="style.css">
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
@@ -24,22 +24,25 @@
                 <table>
                     <tr>
                         <td>red:</td>
-                        <td><input min="0" max="1020" type="number" name="rednumber" for="redslider" oninput="redslider.value=rednumber.value; changeBorderColor();" id="red"></td>
-                        <td><input min="0" max="1020" type="range" name="redslider" for="rednumber" oninput="rednumber.value=redslider.value; changeBorderColor();"></td>
+                        <td><input class="form-control" min="0" max="1020" type="number" name="rednumber" for="redslider" oninput="redslider.value=rednumber.value; changeBorderColor();" id="red"></td>
+                        <td><input class="form-control" min="0" max="1020" type="range" name="redslider" for="rednumber" oninput="rednumber.value=redslider.value; changeBorderColor();"></td>
                     </tr>
                     <tr>
                         <td>green:</td>
-                        <td><input min="0" max="1020" type="number" name="greennumber" for="greenslider" oninput="greenslider.value=greennumber.value; changeBorderColor();" id="green"></td>
-                        <td><input min="0" max="1020" type="range" name="greenslider" for="greennumber" oninput="greennumber.value=greenslider.value; changeBorderColor();"></td>
+                        <td><input class="form-control" min="0" max="1020" type="number" name="greennumber" for="greenslider" oninput="greenslider.value=greennumber.value; changeBorderColor();" id="green"></td>
+                        <td><input class="form-control" min="0" max="1020" type="range" name="greenslider" for="greennumber" oninput="greennumber.value=greenslider.value; changeBorderColor();"></td>
                     <tr>
                         <td>blue:</td>
-                        <td><input min="0" max="1020" type="number" name="bluenumber" for="blueslider" oninput="blueslider.value=bluenumber.value; changeBorderColor();" id="blue"></td>
-                        <td><input min="0" max="1020" type="range" name="blueslider" for="bluenumber" oninput="bluenumber.value=blueslider.value; changeBorderColor();"></td>
+                        <td><input class="form-control" min="0" max="1020" type="number" name="bluenumber" for="blueslider" oninput="blueslider.value=bluenumber.value; changeBorderColor();" id="blue"></td>
+                        <td><input class="form-control" min="0" max="1020" type="range" name="blueslider" for="bluenumber" oninput="bluenumber.value=blueslider.value; changeBorderColor();"></td>
                     </tr>
                 </table>
-                <input type="submit" value="change color" onclick="changeColor();">
-                <input type="submit" value="random color" onclick="randomColor();">
+                <button class="btn btn-default" type="button" onclick="changeColor();">change color</button>
             </form>
+        </div>
+        <div class="col-sm-12 content">
+            <button class="btn btn-default" type="button" onclick="execScript('RandomColor.php');">random color</button>
+            <button class="btn btn-default" type="button" onclick="execScript('Gradient.php');">gradient</button>
         </div>
     </div>
 </div>
@@ -61,9 +64,10 @@ function changeBorderColor() {
 function changeColor() {
     $("#form").ajaxForm({url: 'ChangeColor.php', type: 'post'})
 }
-function randomColor() {
+
+function execScript(scriptname) {
     $.ajax({
-        url: "RandomColor.php"
+        url: scriptname
     })
 }
 
